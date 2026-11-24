@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EPA 10 años — Galería del Evento</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Fondo animado (se activa solo en PC desde app.js) -->
+  <div id="vanta-bg"></div>
+
+  <!-- Encabezado -->
+  <header class="hero">
+    <img src="img/logo.png" alt="EPA 10 años - Evento para administradores" class="logo" />
+    <p class="subtitle">Explorá los mejores momentos del encuentro y descargá tus fotos en calidad original.</p>
+    <button type="button" class="btn-video-open" id="video-open">Ver video del evento</button>
+  </header>
+
+  <!-- Estado y galería -->
+  <div class="status" id="status">Cargando galería del evento...</div>
+  <main class="gallery" id="gallery"></main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <p class="footer-credit">Hecho con amor por</p>
+    <img
+      src="img/footer.png"
+      alt="Gestionar Soluciones Integrales, GIA, Milele y Octopus"
+      class="footer-logos"
+    />
+  </footer>
+
+  <!-- Visor ampliado de fotos -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img id="lightbox-img" src="" alt="Vista previa" />
+    <div class="lightbox-actions">
+      <a class="btn-primary" id="lightbox-download" href="#" target="_blank" rel="noopener">Descargar original</a>
+      <button type="button" class="btn-secondary" id="lightbox-close">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Pop-up de video -->
+  <div class="video-modal" id="video-modal" aria-hidden="true">
+    <div class="video-modal-box">
+      <button type="button" class="video-modal-close" id="video-close" aria-label="Cerrar video">✕</button>
+      <div class="video-frame-wrap">
+        <iframe
+          id="video-iframe"
+          src=""
+          allow="autoplay; fullscreen; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Librerías y script principal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
